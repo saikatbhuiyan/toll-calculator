@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-var sendInterval = time.Second
+var sendInterval = 60 * time.Second
 
 type OBUData struct {
 	OBUID int     `json:"obuID"`
@@ -40,7 +40,6 @@ func main() {
 		}
 		time.Sleep(sendInterval)
 	}
-
 }
 
 func generateOBUIDS(n int) []int {
